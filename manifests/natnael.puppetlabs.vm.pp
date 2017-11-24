@@ -1,5 +1,12 @@
-node 'natnael.puppetlabs.vm' {
+node default {
+   class { 'ntp':
+
+   }
+
+}
+
+  node 'natnael.puppetlabs.vm' {
 	include apache
- 	include systemsusers
-	include vim
+  #include systemsusers
+  #include vim
 }
