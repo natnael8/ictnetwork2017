@@ -1,5 +1,5 @@
 class systemusers{
-	user {"naty2":
+	user {"naty20":
 	  ensure => present,
 	}
  }
