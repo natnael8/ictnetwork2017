@@ -1,6 +1,4 @@
 # ntp/manifests/init.pp - Classes for configuring NTP
-# Copyright (C) 2007 David Schmitt <david@schmitt.edv-bus.at>
-# See LICENSE for the full license granted to you.
 
 	
 class ntp ($ntp_server, $ntpconf = 'ntp/ntp.conf.erb') {
