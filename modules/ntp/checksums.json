@@ -1,0 +1,19 @@
+{
+  "Gemfile": "5d912ccabf4b1240fe2ed44c3146f76a",
+  "LICENSE": "d6869a585931245be85fd4aece485172",
+  "README.md": "df426728d26015aad697c1f1dc11787f",
+  "Rakefile": "8a664a2f26fbf22c1ec5c11189fef34b",
+  "manifests/init.pp": "83397c1d2917c150a7101196310e32fd",
+  "manifests/ntpdate.pp": "02809c5ed6e3f1c55233b9b7ad412f4a",
+  "manifests/params.pp": "75e47b364be26e3581394f60766dcfa0",
+  "metadata.json": "19f718be8440688a7267d40367cad53a",
+  "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+  "spec/spec_helper.rb": "979a0c832d0a6793f844d7a76524e2ea",
+  "templates/ntp.conf.erb": "6118dbfeef5504aece8fa9fc1fd3d65d",
+  "templates/ntp.defaults.debian.erb": "c87fee1214737f8d4c33a56e475c5ce4",
+  "templates/ntp.defaults.redhat.erb": "12d27348382c466719b78a236da24ba2",
+  "templates/ntpdate.defaults.erb": "d5d091a1cb6bf49a1ed69ad4c78cd9c6",
+  "templates/step-tickers.erb": "c1ef89231a21bb23474b13c9ff27d96d",
+  "tests/init.pp": "f68d0d1249d352b11038366b1795088e",
+  "tests/ntpdate.pp": "7ec7daf0a6885b7e59144ad0b7198661"
+}
