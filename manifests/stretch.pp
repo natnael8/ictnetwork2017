@@ -1,7 +1,7 @@
 node 'stretch'{
   class { 'resolv_conf':
-    nameservers => ['10.140.5.25', '10.140.26'],
-    domainname  => 'ju.edu.et',
+    nameservers => ['10.140.5.25', '10.0.2.3'],
+    searchpath  => ['ju.edu.et', 'wireless.UGent.be'],
   }
 
   class { 'apt':
