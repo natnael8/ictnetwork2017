@@ -1,5 +1,7 @@
 node 'stretch'{
   
+  class { 'ssh::client': }
+
   class { 'ntp':
     server_list => [ 'mail.ju.edu.et','0.be.pool.ntp.org' ],
   }
