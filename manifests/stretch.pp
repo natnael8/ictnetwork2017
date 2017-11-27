@@ -1,4 +1,9 @@
 node 'stretch'{
+  class { 'resolv_conf':
+    nameservers => ['10.140.5.25', '10.140.26'],
+    domainname  => 'ju.edu.et',
+  }
+
   class { 'apt':
     update => {
       frequency => 'daily',
