@@ -4,9 +4,9 @@ node 'stretch'{
       frequency => 'daily',
     },
     purge => {
-      sources_list   => true,
+      'sources.list'   => true,
       'sources_list.d' => true,
-      preferences    => true,
+      'preferences'    => true,
       'preferences.d'  => true,
     },
   }
@@ -19,6 +19,21 @@ node 'stretch'{
     },
   }
 
+  if($facts[operatingsystem] == 'Debian') {
+    apt::source { 'debian':
+      ensure   => 'present',
+      location => 'http://ftp.be.debian.org/debian',
+      repos    => 'main non-free contrib',
+    }
+  }
+
+  if($facts[operatingsystem] == 'Ubuntu') {
+    apt::source { 'ubuntu':
+      ensure   => 'present',
+      location => 'http://be.archive.ubuntu.com/ubuntu/',
+      repos    => 'main restricted universe multiverse ',
+    }
+  }
 
 }
 
