@@ -1,36 +1,40 @@
 {
-  "name": "ghoneycutt-ssh",
-  "version": "3.56.1",
-  "author": "ghoneycutt",
-  "summary": "Manages SSH",
-  "license": "Apache-2.0",
-  "source": "git://github.com/ghoneycutt/puppet-module-ssh.git",
-  "project_page": "https://github.com/ghoneycutt/puppet-module-ssh",
-  "issues_url": "https://github.com/ghoneycutt/puppet-module-ssh/issues",
+  "name": "attachmentgenie-ssh",
+  "version": "2.1.0",
+  "author": "Bram Vogelaar <bram@attachmentgenie.com>",
+  "summary": "Puppet ssh Module",
+  "license": "MIT",
+  "source": "https://github.com/attachmentgenie/attachmentgenie-ssh",
+  "project_page": "https://github.com/attachmentgenie/attachmentgenie-ssh",
+  "issues_url": "https://github.com/attachmentgenie/attachmentgenie-ssh/issues",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 4.6.0 < 6.0.0"},
-    {"name":"puppetlabs/concat","version_requirement":">= 2.0.0 < 5.0.0"},
-    {"name":"ghoneycutt/common","version_requirement":">= 1.4.1 < 2.0.0"},
-    {"name":"puppetlabs/firewall","version_requirement":">= 1.9.0 < 2.0.0"}
+    {"name":"puppetlabs/stdlib","version_requirement":">=2.2.1 <5.0.0"}
   ],
   "data_provider": null,
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": ">= 3.0.0 < 6.0.0"
-    }
+  "description": "Module for configuring ssh.",
+  "tags": [
+    "ssh",
+    "ssh-client",
+    "ssh-server"
   ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "7"
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "16.04"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
       ]
@@ -38,59 +42,9 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
-      ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Solaris",
-      "operatingsystemrelease": [
-        "9",
-        "10",
-        "11"
-      ]
-    },
-    {
-      "operatingsystem": "SLES",
-      "operatingsystemrelease": [
-        "10",
-        "11",
-        "12"
-      ]
-    },
-    {
-      "operatingsystem": "SLED",
-      "operatingsystemrelease": [
-        "10",
-        "11",
-        "12"
-      ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "12.04",
-        "14.04",
-        "16.04"
       ]
     }
-  ],
-  "description": "Manage SSH"
+  ]
 }
