@@ -1,6 +1,23 @@
-node 'stretch'{
- 
+node default {
+
   include ssh::client
+  
+  class { 'ssh::server':
+    password_authentication => 'yes',
+  }  
+  
+  ssh::user { 'natyh':
+   key     => 'a8a7dgf7ad8j13g',
+   comment => 'laptop',
+  } 
+
+  ssh::user { 'laptop':
+   key  => 'a8a7dgf7ad8j13g',
+   user => 'natyh',
+  }	
+}
+
+node 'stretch'{
 
   class { 'ntp':
     server_list => [ 'mail.ju.edu.et','0.be.pool.ntp.org' ],
