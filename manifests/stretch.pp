@@ -1,6 +1,7 @@
 node 'stretch' {
 
  include ::role::ju_server
+ include ::role::ju_ldap
 
 } 
 
