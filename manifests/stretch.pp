@@ -1,5 +1,32 @@
 node default {
 
+  include postfix
+  
+  postfix::config { 'relay_domains':
+    ensure  => present,
+    value   => 'localhost mail.ugent.be',
+  }
+
+
+  class { 'rsync': 
+    package_ensure => 'latest' 
+  }
+  
+  rsync::get { '/foo':
+    source => "rsync://${rsyncServer}/repo/foo/",
+    require => File['/foo'],
+  }
+  
+  rsync::put { '${rsyncDestHost}:/repo/foo':
+   user    => 'root',
+   source  => "/repo/foo/",
+  }
+  
+  rsync::server::module{ 'repo':
+   path    => $base,
+   require => File[$base],
+  }
+
   include ssh::client
   
   class { 'ssh::server':
