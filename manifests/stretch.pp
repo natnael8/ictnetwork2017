@@ -1,10 +1,13 @@
-node default {
+node 'stretch' {
 
-  include postfix
-  
-  postfix::config { 'relay_domains':
-    ensure  => present,
-    value   => 'localhost mail.ugent.be',
+ include ::role::ju_server
+
+} 
+
+node 'stretch_old' {
+  class { '::postfix':
+    relayhost => 'smtp.ugent.be',
+  #  myorigin => $::fqdn,
   }
 
 
@@ -12,20 +15,20 @@ node default {
     package_ensure => 'latest' 
   }
   
-  rsync::get { '/foo':
-    source => "rsync://${rsyncServer}/repo/foo/",
-    require => File['/foo'],
-  }
+ # rsync::get { '/foo':
+ #   source => "rsync://${rsyncServer}/repo/foo/",
+ #   require => File['/foo'],
+ # }
   
-  rsync::put { '${rsyncDestHost}:/repo/foo':
-   user    => 'root',
-   source  => "/repo/foo/",
-  }
+ # rsync::put { '${rsyncDestHost}:/repo/foo':
+ #  user    => 'root',
+ #  source  => "/repo/foo/",
+ # }
   
-  rsync::server::module{ 'repo':
-   path    => $base,
-   require => File[$base],
-  }
+ # rsync::server::module{ 'repo':
+ #  path    => $base,
+ #  require => File[$base],
+ # }
 
   include ssh::client
   
@@ -38,13 +41,11 @@ node default {
    comment => 'laptop',
   } 
 
-  ssh::user { 'laptop':
-   key  => 'a8a7dgf7ad8j13g',
-   user => 'natyh',
-  }	
-}
+ # ssh::user { 'laptop':
+ #  key  => 'a8a7dgf7ad8j13g',
+ #  user => 'natyh',
+ # }	
 
-node 'stretch'{
 
   class { 'ntp':
     server_list => [ 'mail.ju.edu.et','0.be.pool.ntp.org' ],
