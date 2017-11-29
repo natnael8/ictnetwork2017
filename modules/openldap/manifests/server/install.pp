@@ -18,9 +18,11 @@ class openldap::server::install {
       content => "slapd slapd/domain\tstring\tmy-domain.com\n",
       before  => Package[$::openldap::server::package],
     }
-    $responsefile = '/var/cache/debconf/slapd.preseed'
-  } else {
-    $responsefile = undef
+  }
+
+  $responsefile = $::osfamily ? {
+    'Debian' => '/var/cache/debconf/slapd.preseed',
+    'RedHat' => undef,
   }
 
   package { $::openldap::server::package:

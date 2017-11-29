@@ -1,0 +1,2 @@
+# @since 1.5.0
+type Bodgitlib::LDAP::DN = Pattern[/(?x) ^ (?<comp> (?<tv> (?: [[:alpha:]] [[:alnum:]_-]* | (?: (?: oid | OID ) \. )? [[:digit:]]+ (?: \. [[:digit:]]+ )* ) [[:space:]]* = [[:space:]]* (?: \# (?: [[:xdigit:]]{2} )+ | (?: [^,=\+<>#;\\"] | \\ [,=\+<>#;\\"] | \\ [[:xdigit:]]{2} )* | " (?: [^\\"] | \\ [,=\+<>#;\\"] | \\ [[:xdigit:]]{2} )* " ) ) (?: [[:space:]]* \+ [[:space:]]* \g<tv> )* ) (?: [[:space:]]* [,;] [[:space:]]* \g<comp> )* $/]

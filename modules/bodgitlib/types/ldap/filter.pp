@@ -1,0 +1,2 @@
+# @since 1.5.0
+type Bodgitlib::LDAP::Filter = Pattern[/(?x) ^ (?<re> \( (?: [&|] \g<re>+ | ! \g<re> | (?: (?<attr> (?: [[:alpha:]] [[:alnum:]_-]* | [[:digit:]]+ (?: \. [[:digit:]]+ )* ) (?: ; [[:alpha:]] [[:alnum:]-]* )* ) [~<>]? = (?<value> (?: [^\\()*] | \\ [[:xdigit:]]{2} )* ) | \g<attr> = \* | \g<attr> = \g<value>? \* (?: \g<value> \* )* \g<value>? | (?: \g<attr> (?: :dn )? (?: : (?<rule> [[:digit:]]+ (?: \. [[:digit:]]+ )* | [[:alpha:]] [[:alnum:]]* Match ) )? := \g<value> | (?: : (?: dn | DN ) )? : \g<rule> := \g<value> ) ) ) \) ) $/]

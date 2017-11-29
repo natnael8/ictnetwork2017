@@ -1,0 +1,17 @@
+{
+  "README.md": "b20928fb0045329f389c8d24b91a1d5e",
+  "metadata.json": "72776cd275bdcbaba6fb2650f8d73e35",
+  "types/address/nosubnet.pp": "e531a2add2065f56d27fb44067e21da4",
+  "types/address/v4/cidr.pp": "211c4645ab71965e85f8db3f8bd2f4a6",
+  "types/address/v4/nosubnet.pp": "a7adaec5ddd9eff0d8cbb50e40a0dbad",
+  "types/address/v4.pp": "e85d475edb6b98034cf957d8c0356747",
+  "types/address/v6/alternative.pp": "2fe69510a890f8c080564ad175c702a4",
+  "types/address/v6/compressed.pp": "0dc38d14c2b0e744a2f38c7abc462fed",
+  "types/address/v6/full.pp": "9e6cc900867db1025313d9d4c242c8fc",
+  "types/address/v6/nosubnet/alternative.pp": "660aa11db0c1a5d1e8b7854f432909c2",
+  "types/address/v6/nosubnet/compressed.pp": "45a26404d20be76a6a4be86c2b56c9bf",
+  "types/address/v6/nosubnet/full.pp": "24a9f5d145dab8c966301982f7189f0a",
+  "types/address/v6/nosubnet.pp": "46b22cf3268f1b8e4bb1b31ccab2034b",
+  "types/address/v6.pp": "b6267f7c8831128a4f275aadbe92f98a",
+  "types/address.pp": "6e621d4c7031cbc9b2a6fb6ea87451ff"
+}

@@ -10,6 +10,12 @@ describe 'openldap::server::database' do
         facts
       end
 
+      context 'with an invalid directory' do
+        let(:params) {{ :directory => 'bar' }}
+
+        it { expect { is_expected.to compile }.to raise_error(/class ::openldap::server has not been evaluated/) }
+      end
+
       context 'without declaring Class[openldap::server]' do
         let(:params) {{ :directory => '/foo/bar' }}
 

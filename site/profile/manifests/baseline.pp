@@ -6,7 +6,7 @@ class profile::baseline {
   }
 
   class { 'resolv_conf':
-    nameservers => ['10.140.5.26', '10.0.2.3'],
+    nameservers => ['8.8.8.8', '10.0.2.3'],
     searchpath  => ['ju.edu.et', 'wireless.UGent.be'],
   }
 
