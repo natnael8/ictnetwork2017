@@ -48,4 +48,7 @@ class profile::baseline {
     password => 'Asdf1234',
     locked   => false,
    }
+
+   $p = ['openssh-server','vim', 'mailutils']
+     ensure_packages($p)
 }
